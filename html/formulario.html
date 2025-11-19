@@ -7,26 +7,6 @@
     <title>Document</title>
     <link rel="stylesheet" href="../css/formulario.css">
 </head>
-<script>
-document.getElementById("btn_agregar").addEventListener("click", function(e) {
-    e.preventDefault();
-    const nombre = document.getElementById("input_nombre").value.trim();
-    const apellido = document.getElementById("input_apellido").value.trim();
-
-    if (nombre === "" || apellido === "") {
-        alert("Completa ambos campos.");
-        return;
-    }
-
-    document.getElementById("celda_nombre").textContent = nombre;
-    document.getElementById("celda_apellido").textContent = apellido;
-
-    document.getElementById("input_nombre").value = "";
-    document.getElementById("input_apellido").value = "";
-    document.getElementById("input_nombre").focus();
-});
-</script>
-
 <body>
     <header>Formulario</header>
     <nav></nav>
@@ -37,7 +17,8 @@ document.getElementById("btn_agregar").addEventListener("click", function(e) {
                     <p id="id_nombre" type="Nombre: "></p><input id="input_nombre" type="text">
                     <p id="id_apellido" type="Apellido: "></p><input id="input_apellido" type="text">
                     <div class="boton">
-                        <button onclick="" id="btn_agregar">Agregar</button>
+                        <button id="btn_agregar">Agregar</button>
+
                     </div>
                 </div>
             </form>
